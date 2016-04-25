@@ -18,3 +18,11 @@ class View{
 
 
 }
+
+class userView{
+
+	public function outPut( $viewName ){
+		echo "coming from $viewName class <br>";
+	}
+	
+}

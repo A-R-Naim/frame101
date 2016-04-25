@@ -10,18 +10,21 @@ $route = new Route;
 	
 $route->add( 
 	array(
-		'/'      => array( 'model' => 'homeModel', 'view' => 'homeView', 'controler' => 'homeControler' ),       
-		'/about' => array( 'model' => 'aboutModel', 'view' => 'pageView', 'controler' => 'aboutControler' ),
-		'/blog'  => array( 'model' => 'blogModel', 'view' => 'blogView', 'controler' => 'blogControler' ),
+		'/'         => array( 'model' => 'homeModel', 'view' => 'homeView', 'controler' => 'homeControler' ),       
+		'about'     => array( 'model' => 'aboutModel', 'view' => 'pageView', 'controler' => 'aboutControler' ),
+		'blog'      => array( 'model' => 'blogModel', 'view' => 'blogView', 'controler' => 'blogControler' ),
+		'user/naim' => array( 'model' => 'userModel', 'view' => 'userView', 'controler' => 'userControler' ),
 		)
 	);
 
 $route->filter();
+
+
+
+
 // echo $route->model . '<br/>';
 // echo $route->view . '<br/>';
 // echo $route->controler . '<br/>';
-
-
 // 
 $model     = new Model;
 $controler = new Controler( $model );
@@ -31,5 +34,5 @@ if ( isset( $_GET['action'] ) && !empty( $_GET['action'] ) ) {
 	$controler->{$_GET['action']}();
 }
 
-echo $view->output();
+//echo $view->output();
 
