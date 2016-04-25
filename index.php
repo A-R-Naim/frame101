@@ -33,6 +33,5 @@ $view      = new View ( $controler, $model );
 if ( isset( $_GET['action'] ) && !empty( $_GET['action'] ) ) {
 	$controler->{$_GET['action']}();
 }
-
 //echo $view->output();
 
