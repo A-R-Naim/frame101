@@ -9,7 +9,7 @@ class Model
 
 	public function __construct()
 	{
-		$this->string = 'PHP + MVC is =  awesome! click here';
+		$this->string = 'Content comes from model class';
 	}
 
 }

@@ -20,6 +20,7 @@ class Route{
 
 	public function add( $uri ){
 		$this->_uri = $uri;
+		return $this;
 	}
 
 	public function filter(){
@@ -44,7 +45,7 @@ class Route{
 				$extractView = new $this->view;
 				$extractView->outPut( $this->view );
 
-				echo 'match found';
+				echo 'match found with url';
 				
 			}
 
