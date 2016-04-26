@@ -25,11 +25,10 @@ class Route{
 	public function filter(){
 
 
-		$uri      = $_GET['url'];
+		$uri      = isset( $_GET['url'] ) ? $_GET['url'] : '/';
 		$uri      = explode( '/', $uri );
 		$basetUri = $uri[0];
 
-		$basetUri = isset( $basetUri ) ? $basetUri : '/' ;
 
 		foreach ($this->_uri as $key => $value) {
 
@@ -50,6 +49,7 @@ class Route{
 			}
 
 		}
+
 
 	
 	} #filter
